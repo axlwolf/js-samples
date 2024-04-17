@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="jumbotron">
+        <h1>Bin2Dec</h1>
+        <form>
+          <div class="mb-3">
+            <label for="decimalNumber" class="form-label"
+              >Enter the decimal number</label
+            >
+            <input
+              type="number"
+              pattern="[01]*"
+              class="form-control"
+              title="Only binary digits (0 and 1) are allowed."
+              id="decimalNumber"
+            />
+          </div>
+          <button id="convertButton" class="btn btn-primary convert-btn">
+            Convert number
+          </button>
+        </form>
+        <br />
+        <div class="alert alert-primary" id="result" role="alert"></div>
+      </div>
+    </main>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="./Bin2Dec.js"></script>
+  <script src="./convert.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // initial config
+      Bin2Dec.init();
+    });
+  </script>
+</html>
